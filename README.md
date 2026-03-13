@@ -40,11 +40,6 @@ Comandi utili aggiuntivi
 3. **Git**
    * Scaricare da: https://git-scm.com/downloads (per mac: digitare `xcode-select --install` nella bash)
    * Verificare l'installazione: `git --version`
-   * Configurazione minima obbligatoria:
-```bash
-git config --global user.name "Nome Cognome"
-git config --global user.email "email@esempio.com"
-```
 
 4. **uv** — gestore di ambienti virtuali e dipendenze Python
    * Linux/macOS:
