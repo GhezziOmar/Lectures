@@ -69,10 +69,13 @@ Una volta aperto VS Code, aprire il terminale integrato (menu a tendina: Termina
 # Spostarsi nella sottocartella della lezione corrente (es. L00)
 cd L00
 
-# Spostarsi nella (o creare la) sottocartella 'Vostri_esercizi'
-cd Vostri_esercizi
+# Creo la sottocartella 'Miei_esercizi'
+mkdir Miei_esercizi
 
-# Creare e aprire direttamente il file el primo programma python
+# Spostarsi nella sottocartella 'Miei_esercizi'
+cd Miei_esercizi
+
+# Creare e aprire direttamente il file del primo programma python
 code rettangolo.py
 ```
 
