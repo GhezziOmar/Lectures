@@ -42,14 +42,8 @@ Comandi utili aggiuntivi
    * Verificare l'installazione: `git --version`
 
 4. **uv** — gestore di ambienti virtuali e dipendenze Python
-   * Linux/macOS:
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-   * Windows (PowerShell):
-```bash
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-```
+   * Linux/macOS:`curl -LsSf https://astral.sh/uv/install.sh | sh`
+   * Windows (PowerShell): `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
    * Verificare l'installazione: `uv --version`
 
 
