@@ -102,7 +102,7 @@ Inserisci un numero: 9
 ## 6. Creazione matrice da lista 
 
 Scrivere un programma che, data la seguente lista di 16 numeri:
-* crei una matrice numpy 4x4 disponendo i numeri sulla prima riga, poi sulla seconda, e così via;
+* crei una matrice (lista di liste) 4x4 disponendo i numeri sulla prima riga, poi sulla seconda, e così via;
 * stampi la matrice riga per riga.
 
 **Lista da inserire hard coded nel codice:**
