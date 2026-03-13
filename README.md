@@ -38,7 +38,7 @@ Comandi utili aggiuntivi
    * Verificare l'installazione: `python --version`
 
 3. **Git**
-   * Scaricare da: https://git-scm.com/downloads
+   * Scaricare da: https://git-scm.com/downloads (per mac: digitare `xcode-select --install` nella bash)
    * Verificare l'installazione: `git --version`
    * Configurazione minima obbligatoria:
 ```bash
