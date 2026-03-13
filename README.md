@@ -63,8 +63,7 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 Aprire il terminale su Linux/macOS o il prompt dei comandi su Windows, succesivamente:
 ```bash
 # 1. Spostarsi sul Desktop
-cd ~/Desktop                        # Linux/macOS
-cd %USERPROFILE%\Desktop            # Windows
+cd Desktop         
 
 # 2. Clonare la repository da GitHub
 git clone https://github.com/GhezziOmar/Lectures.git
