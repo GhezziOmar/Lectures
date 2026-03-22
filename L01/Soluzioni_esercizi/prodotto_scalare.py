@@ -8,8 +8,6 @@ def main():
     for i in range(len(v)):
         ps += v[i] * w[i]
     
-    print(v)
-    print(w)
     print(f"Prodotto scalare: {ps}")
 
 

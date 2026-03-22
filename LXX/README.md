@@ -14,7 +14,7 @@ lista = [4, 12, 7, 3, 19, 8, 25, 1, 14, 6, 11, 17, 2, 9, 22]
 $ python conteggio.py (in alternativa: uv run conteggio.py)
 Inserisci il valore minimo dell'intervallo: 5
 Inserisci il valore massimo dell'intervallo: 15
-Elementi compresi tra 5 e 15: 6
+Elementi compresi tra 5 e 15: 7
 ```
 ---
 
@@ -22,7 +22,7 @@ Elementi compresi tra 5 e 15: 6
 
 Scrivere un programma Python che utilizzi il metodo del Crivello di Eratostene per stampare l'elenco dei numeri primi fino a un numero `n` specificato da tastiera.
 
-Il Crivello di Eratostene funziona così: si scrivono tutti i numeri naturali da 2 fino a `n`. In seguito, si cancellano tutti i multipli del primo numero (escluso lui stesso). Poi si prende il primo numero non cancellato e si ripete l'operazione, proseguendo fino alla fine. I numeri rimasti sono i numeri primi.
+Il Crivello di Eratostene considera una lista contenente tutti i numeri da 2 a n detto 'setaccio'. Ad ogni passo prende il primo numero del setaccio (detto `primo`, in quanto dimostrato essere sempre un numero primo) e costruisce un nuovo setaccio tenendo solo i numeri che non sono multipli di `primo`. Poi ripete lo stesso procedimento sul nuovo setaccio, finché il setaccio non risulta vuoto.
 
 ##### Esempio d'esecuzione:
 ```text
@@ -65,12 +65,12 @@ C = (F - 32) × 5/9
 $ python temperature.py (in alternativa: uv run temperature.py)
 Converti da (C)elsius a Fahrenheit o da (F)ahrenheit a Celsius? C
 Inserisci la temperatura in Celsius: 60
-60°C corrisponde a 140.0°F
+60°C corrisponde a 140°F
 
 $ python temperature.py (in alternativa: uv run temperature.py)
 Converti da (C)elsius a Fahrenheit o da (F)ahrenheit a Celsius? F
 Inserisci la temperatura in Fahrenheit: 45
-45°F corrisponde a 7.22°C
+45°F corrisponde a 7.22222°C
 ```
 ---
 
@@ -120,10 +120,10 @@ stringa = "thequickbrownfoxjumpsoverthelazydog"
 $ python caratteri_ripetuti.py (in alternativa: uv run caratteri_ripetuti.py)
 o 4
 e 3
-u 2
-h 2
-r 2
 t 2
+h 2
+u 2
+r 2
 ```
 ---
 
@@ -148,7 +148,7 @@ Risultato: [1, 3, 5, 7, 9, 10]
 
 ## 9. Prodotto degli elementi di una tupla
 
-Scrivere un programma che, date le seguenti due tuple hard coded, calcoli e stampi il prodotto di tutti i loro elementi.
+Scrivere un programma che, date le seguenti due tuple hard coded, calcoli e stampi il prodotto di tutti i loro elementi. Il programma deve prevedere la definizione di un’apposita funzione `prodotto_elementi` che, ricevuta in ingrsso una tupla, ritorni il prodotto dei suoi elementi
 
 **Tuple da inserire hard coded nel codice:**
 ```python
@@ -159,8 +159,8 @@ tupla2 = (2, 4, 8, 8, 3, 2, 9)
 ##### Esempio d'esecuzione:
 ```text
 $ python prodotto_tupla.py (in alternativa: uv run prodotto_tupla.py)
-Tupla 1: (4, 3, 2, 2, -1, 18) → Prodotto: -864
-Tupla 2: (2, 4, 8, 8, 3, 2, 9) → Prodotto: 27648
+Tupla 1: (4, 3, 2, 2, -1, 18) , Prodotto: -864
+Tupla 2: (2, 4, 8, 8, 3, 2, 9) , Prodotto: 27648
 ```
 ---
 
@@ -191,11 +191,17 @@ $ python frequenza_valori.py (in alternativa: uv run frequenza_valori.py)
 
 Definire la funzione `max_length(L)` che prende come argomento una lista `L` di stringhe e restituisce la stringa con la lunghezza massima. Si assuma che `L` sia non vuota e che tutte le stringhe siano diverse tra loro. La funzione non deve chiamare altre funzioni eccetto `len()`.
 
+**Test da verificare:**
+```python
+print(max_length(["cane", "gatto", "rinoceronte", "topo"]))
+print(max_length(["mela", "banana", "kiwi"]))
+```
+
 ##### Esempio d'esecuzione:
 ```text
 $ python max_length.py (in alternativa: uv run max_length.py)
-max_length(["cane", "gatto", "rinoceronte", "topo"]) → rinoceronte
-max_length(["mela", "banana", "kiwi"]) → banana
+rinoceronte
+banana
 ```
 ---
 
@@ -203,10 +209,16 @@ max_length(["mela", "banana", "kiwi"]) → banana
 
 Definire la funzione `somma_div_dispari(N)` che restituisce la somma di tutti i divisori positivi dispari di `N`. Si assuma che `N` sia un intero maggiore di 1. Sia 1 che `N` stesso sono considerati divisori di `N`.
 
+**Test da verificare:**
+```python
+print(somma_div_dispari(21))
+print(somma_div_dispari(18))
+```
+
 ##### Esempio d'esecuzione:
 ```text
 $ python somma_div_dispari.py (in alternativa: uv run somma_div_dispari.py)
-somma_div_dispari(21) → 32   # divisori dispari: 1, 3, 7, 21
-somma_div_dispari(18) → 13   # divisori dispari: 1, 3, 9
+32   
+13 
 ```
 ---

@@ -137,3 +137,24 @@ Eseguire il file con uv
 ```bash
 uv run rettangolo.py
 ```
+
+### 7: Aggiornare la repository mantenendo le modifiche locali
+
+Se il repository viene aggiornato, è necessario scaricare gli aggiornamenti senza perdere i file creati localmente. La procedura è la seguente:
+```bash
+
+# 0. Entrare nella cartella di lavoro da aggiornare (supponendo di trovarci nel Desktop)
+cd Lectures
+
+# 1. Mettere da parte le modifiche locali temporaneamente
+git stash
+
+# 2. Scaricare gli aggiornamenti dalla repository remota
+git pull
+
+# 3. Riapplicare le modifiche locali
+git stash pop
+```
+
+`git stash` salva temporaneamente tutte le modifiche locali in uno spazio separato, `git pull` scarica i nuovi materiali dal repository remoto, e `git stash pop` riapplica le modifiche salvate sopra ai nuovi file scaricati.
+

@@ -1,24 +1,8 @@
 # Lezione 01: Esercizi Python Base (Parte 2)
-## 1. Massimo e minimo di una lista
-Scrivere un programma che, data la seguente lista di numeri, trovi e stampi il valore massimo, il valore minimo e la loro differenza, senza usare le funzioni built-in `max()` e `min()`.
 
-**Lista da inserire hard coded nel codice:**
-```python
-lista = [14, 3, 27, 8, 42, 5, 19, 33, 1, 11]
-```
+## 1. Inversione di una lista
+Scrivere un programma che, data la seguente lista, la inverta, senza usare il metodo della classe list `reverse()` o lo slicing `[::-1]`.
 
-##### Esempio d'esecuzione:
-```text
-$ python max_min.py (in alternativa: uv run max_min.py)
-Lista: [14, 3, 27, 8, 42, 5, 19, 33, 1, 11]
-Valore massimo: 42
-Valore minimo: 1
-Differenza: 41
-```
-
----
-## 2. Inversione di una lista
-Scrivere un programma che, data la seguente lista, la inverta, senza usare la funzione built-in `reverse()` o lo slicing `[::-1]`.
 **Lista da inserire hard coded nel codice:**
 ```python
 lista = [10, 20, 30, 40, 50, 60, 70]
@@ -32,8 +16,8 @@ Lista invertita: [70, 60, 50, 40, 30, 20, 10]
 ```
 
 ---
-## 3. Prodotto scalare tra vettori (NumPy)
-Scrivere un programma che, dati i seguenti due vettori `v` e `w`, calcoli e stampi il loro prodotto scalare (senza ricorrere alla funzione `np.dot(v, w)` di numpy).
+## 2. Prodotto scalare tra vettori (NumPy)
+Scrivere un programma che, dati i seguenti due vettori `v` e `w`, calcoli e stampi il loro prodotto scalare (senza ricorrere alla funzione `np.dot(v, w)` di numpy o l'operatore `@`).
 
 **Vettori da inserire hard coded nel codice:**
 ```python
@@ -50,13 +34,11 @@ v · w = v_1 * w_1 + v_2 * w_2 + ... + v_n * w_n
 ##### Esempio d'esecuzione:
 ```text
 $ python prodotto_scalare.py (in alternativa: uv run prodotto_scalare.py)
-v = [1 2 3 4]
-w = [5 6 7 8]
 Prodotto scalare: 70
 ```
 
 ---
-## 4. Trasposizione di una matrice (NumPy)
+## 3. Trasposizione di una matrice (NumPy)
 Scrivere un programma che, data la seguente matrice NumPy di dimensioni 2x3:
 * stampi la matrice originale con le sue dimensioni;
 * calcoli e stampi la sua trasposta con le nuove dimensioni, costruendola manualmente con cicli for.
@@ -84,7 +66,7 @@ Matrice trasposta (3x2):
  [3 6]]
 ```
 
-## 5. Moltiplicazione tra matrici (NumPy)
+## 4. Moltiplicazione tra matrici (NumPy)
 Scrivere un programma che, date le seguenti due matrici NumPy, calcoli e stampi il loro prodotto matriciale **senza usare** `np.dot` o l'operatore `@`.
 
 **Matrici da inserire hard coded nel codice:**
@@ -102,20 +84,13 @@ C[i, j] = A[i,0]*B[0,j] + A[i,1]*B[1,j] + ... + A[i,n]*B[n,j]
 ##### Esempio d'esecuzione:
 ```text
 $ python prodotto_matrici.py (in alternativa: uv run prodotto_matrici.py)
-A =
-[[1 2]
- [3 4]
- [5 6]]
-B =
-[[ 6  7  8]
- [ 9 10 11]]
 A x B =
 [[ 24  27  30]
  [ 54  61  68]
  [ 84  95 106]]
 ```
 
-## 6. Rimozione duplicati da una lista
+## 5. Rimozione duplicati da una lista
 
 Scrivere un programma che, data la seguente lista, rimuova i duplicati mantenendo l'ordine di prima apparizione, **senza usare** `set()` o altre funzioni built-in per la deduplicazione.
 
@@ -132,7 +107,7 @@ Lista senza duplicati: [3, 7, 2, 1, 9, 5, 8]
 ```
 ---
 
-## 7. Anagrammi
+## 6. Anagrammi
 
 Scrivere un programma che legga da tastiera due parole e verifichi se sono anagrammi l'una dell'altra, cioè se contengono esattamente le stesse lettere con le stesse frequenze. Il confronto deve essere case-insensitive. **Non è consentito** usare `sorted()` o `Counter`.
 
@@ -149,7 +124,7 @@ Inserisci la seconda parola: abc
 "aab" e "abc" non sono anagrammi
 ```
 ---
-## 8. Ordinamento di un dizionario
+## 7. Ordinamento di un dizionario
 
 Scrivere un programma che, dato il seguente dizionario contenente i voti di alcuni studenti, restituisca una lista di tuple ordinate per voto decrescente **senza usare** `sorted()`, `sort()` o qualsiasi altra funzione di ordinamento built-in. A parità di voto, i nomi devono essere in ordine alfabetico crescente.
 
@@ -177,6 +152,26 @@ Lista ordinata:       [('Franco', 9), ('Mario', 9), ('Carla', 8), ('Elena', 7), 
 ```
 ---
 
+## 8. Istogramma testuale
+
+Scrivere un programma che, data la seguente lista di voti, stampi un istogramma orizzontale a barre di asterischi che mostri quante volte compare ciascun voto, ordinato per voto crescente. **Non è consentito** usare funzioni built-in come `count()`, `sorted()` e `sort()` .
+
+**Lista da inserire hard coded nel codice:**
+```python
+voti = [6, 8, 7, 9, 6, 7, 8, 6, 10, 7, 9, 8, 7, 6, 8]
+```
+
+##### Esempio d'esecuzione:
+```text
+$ python istogramma.py (in alternativa: uv run istogramma.py)
+6: ****
+7: ****
+8: ****
+9: **
+10: *
+```
+---
+
 ## 9. Normalizzazione di un vettore (NumPy)
 
 Scrivere un programma che, dato un vettore NumPy, definisca una funzione `norma(v)` che calcoli e restituisca la norma euclidea del vettore.
@@ -199,22 +194,55 @@ Vettore normalizzato: [0.6 0.8 0. 0.]
 ```
 ---
 
-## 10. Istogramma testuale
 
-Scrivere un programma che, data la seguente lista di voti, stampi un istogramma orizzontale a barre di asterischi che mostri quante volte compare ciascun voto, ordinato per voto crescente. **Non è consentito** usare funzioni built-in come `count()`, `sorted()` e `sort()` .
+## 10. Matrice da input utente 
 
-**Lista da inserire hard coded nel codice:**
+Scrivere un programma che legga da tastiera una matrice inserita riga per riga dall'utente. Ogni riga è una sequenza di numeri interi separati da uno spazio. L'inserimento termina quando l'utente digita `.`. Il programma deve:
+* raccogliere le righe inserite e costruire una lista di liste;
+* tentare di convertire la lista di liste in un array NumPy;
+* stampare la matrice se la conversione ha successo (tutte le righe hanno lo stesso numero di elementi), altrimenti stampare un messaggio di errore.
+
+**Suggerimento:**
+Python non ha un costrutto `do-while` nativo come altri linguaggi, ma si può simulare con un ciclo `while True` che esegue sempre almeno una iterazione e si interrompe con `break` quando viene soddisfatta la condizione di uscita:
 ```python
-voti = [6, 8, 7, 9, 6, 7, 8, 6, 10, 7, 9, 8, 7, 6, 8]
+while True:
+    riga = input("...")
+    if riga == ".":
+        break
+    # elabora riga
+```
+Ogni riga inserita va divisa nei suoi elementi costituenti considerando come separatore lo spazio bianco (gestendo anche spazi multipli consecutivi). Ogni elemento va poi convertito in intero.
+
+La conversione in array NumPy va gestita con un blocco `try/except`: se le righe hanno lunghezze diverse, NumPy non riesce a costruire una matrice rettangolare e solleva un `ValueError`:
+```python
+try:
+    matrice = np.array(lista_righe, dtype=int)
+    print(matrice)
+except ValueError:
+    print("Errore: le righe hanno lunghezze diverse, impossibile creare la matrice.")
 ```
 
-##### Esempio d'esecuzione:
+##### Esempio d'esecuzione (caso corretto):
 ```text
-$ python istogramma.py (in alternativa: uv run istogramma.py)
-6: ****
-7: ****
-8: ****
-9: **
-10: *
+$ python matrice_input.py (in alternativa: uv run matrice_input.py)
+Inserisci una riga (oppure . per terminare): 1 2 3
+Inserisci una riga (oppure . per terminare): 4 5 6
+Inserisci una riga (oppure . per terminare): 7 8 9
+Inserisci una riga (oppure . per terminare): .
+Matrice inserita:
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
 ```
----
+
+##### Esempio d'esecuzione (caso errato):
+```text
+$ python matrice_input.py (in alternativa: uv run matrice_input.py)
+Inserisci una riga (oppure . per terminare): 1 2 3
+Inserisci una riga (oppure . per terminare): 4 5
+Inserisci una riga (oppure . per terminare): 7 8 9
+Inserisci una riga (oppure . per terminare): .
+Errore: le righe hanno lunghezze diverse, impossibile creare la matrice.
+```
+
+

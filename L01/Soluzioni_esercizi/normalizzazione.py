@@ -13,7 +13,7 @@ def main():
 
     print(f"Vettore originale: {v}")
     print(f"Norma: {n}")
-    print(f"Vettore originale: {v_normalizzato}")
+    print(f"Vettore normalizzato: {v_normalizzato}")
 
 if __name__ == "__main__":
     main()

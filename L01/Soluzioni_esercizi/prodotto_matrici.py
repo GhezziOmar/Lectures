@@ -18,10 +18,6 @@ def main():
                 ps += A[i, k] * B[k, j]   # avrei potuto scrivere direttamente C[i,j] += A[i, k] * B[k, j] (senza usare ps)
             C[i, j] = ps
     
-    print("A =")
-    print(A)
-    print("B =")
-    print(B)
     print("A x B =")
     print(C)
 
