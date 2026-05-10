@@ -158,3 +158,53 @@ git stash pop
 
 `git stash` salva temporaneamente tutte le modifiche locali in uno spazio separato, `git pull` scarica i nuovi materiali dal repository remoto, e `git stash pop` riapplica le modifiche salvate sopra ai nuovi file scaricati.
 
+
+# Jupyter Notebook in VS Code
+
+## PARTE A — Configurazione dell'Ambiente
+
+Questi notebook richiedono il virtual environment `lectures` che si trova nella cartella **genitore** di `L03/` (cioè nella stessa cartella che contiene `L03/`).
+
+Come per gli esercizi di coding, aprire il terminale su Linux/macOS o il prompt dei comandi su Windows, succesivamente:
+```bash
+# 1. Spostarsi sul Desktop
+cd ~/Desktop                        # Linux/macOS
+cd %USERPROFILE%\Desktop            # Windows
+
+# 2. Clonare la repository da GitHub
+git clone https://github.com/GhezziOmar/Lectures.git
+
+# 3. Entrare nella cartella clonata
+cd Lectures
+
+# 4. Aprire VS Code nella cartella corrente
+code .
+```
+
+Una volta aperto VS Code, aprire il terminale integrato (menu a tendina: Terminale -> Nuovo Terminale) e:
+```bash
+# Creare il virtual environment `.venv/` messo a disposizione da uv
+uv sync
+
+# Selezionare (manualmente) il file ./L03/Lezione03.ipynb 
+# In alto a destra, cliccare la voce `Selezionare Kernel`
+# Nella tendina che appare, selezionare `Ambienti Python...`
+# Selezionare environment `lectures (Python 3.10.3)`
+# Cliccare sulla cella del notebook `Eseguire tutti` (installare eventuali estensioni suggerite)
+```
+
+
+### Alternativa ad uv (con Nota per utenti Windows):
+
+Se si dispone di un `.venv/` diverso, è possibile attivarlo (per renderlo visibile nel momento della selezione del kernel jupyter) come segue:
+ ```bash
+ source .venv/bin/activate
+ ```
+Il prompt cambierà mostrando `(lectures)` all'inizio. Per gli utenti windows:
+
+```cmd
+.venv\Scripts\activate
+```
+
+---
+
